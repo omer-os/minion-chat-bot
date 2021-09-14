@@ -1,19 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700;900&display=swap');
+
+
+/* main styles */
 html,body{
     margin: 0;
     width: 100%;
     height: 100%;
+    background-color: #4F4744;
 }
 *{
     scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+}*::selection{
+    background-color: #FFE76B;
+    text-shadow: 0 0 5px rgb(72, 73, 5);
+}img::selection{
+    background-color: transparent;
 }
+
+
+
+
+
+
+
+/* page -1- style starts here */
 .page1{
-    background-color: #4F4744;
     position: absolute;
     left: 0;
     top: 0;
     right: 0;
     bottom: 0;
+    background-color: #4F4744;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -21,7 +39,10 @@ html,body{
     align-items: center;
     font-family: 'Roboto';
     color: white;
+}.page1>*{
+    animation: animatePage1 1s ease;
 }
+@keyframes animatePage1 {from{transform: scale(.3);opacity: 0;}}
 .img1{
     margin-top: 15px;
     margin-bottom: 15px;
@@ -36,8 +57,7 @@ html,body{
     max-width: 270px;
     margin: auto;
 }
-
-.page1Btn{
+.letsStartBtn{
     padding: 10px 60px;
     font-size: 1.1rem;
     border-radius: 5px;
@@ -47,9 +67,11 @@ html,body{
     text-transform: capitalize;
     font-weight: 600;
     border: none;
-}.page1Btn:active{
+    cursor: pointer;
+}.letsStartBtn:active{
     transform: scale(.94);
 }
+/* page -1- style ends here */
 
 
 
@@ -81,7 +103,6 @@ html,body{
     flex-direction: column;
     justify-content: space-between;
 }
-
 .animatePage2Slider{
     animation: animateSlider 1s ease forwards;
 }
@@ -90,7 +111,6 @@ html,body{
         left: 0;
     }
 }
-
 .page2Nav{
     background-color: #4F4744;
     color: white;
@@ -157,15 +177,23 @@ html,body{
     padding: 10px;
     border-radius: 10px;
     font-family: sans-serif;
+    width: fit-content;
+    min-width: 70px;
 }.msgTop{
     color: #4F4744;
     font-size: 1.2rem;
     font-weight: 600;
     margin-bottom: 8px;
-}.msgBottom{
+}
+.myMsg{
+    margin-left: auto;
+}
+.msgBottom{
     color: #4F4744;
     font-size: 1.1rem;
-}.Minionmsg::before{
+}
+/* for massege tringle */
+.Minionmsg::before{
     content: '';
     display: inline-block;
     position: absolute;
@@ -176,7 +204,9 @@ html,body{
     border-right: 15px solid #FFFB9E;
     border-top: 10px solid transparent ;
     border-bottom: 10px solid transparent;
-}.myMsg::before{
+}
+/* for massege tringle */
+.myMsg::before{
     content: '';
     display: inline-block;
     position: absolute;

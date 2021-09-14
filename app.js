@@ -1,5 +1,5 @@
 // setting constants
-const page1Btn = document.querySelector('.page1Btn')
+const letsStartBtn = document.querySelector('.letsStartBtn')
 const threeCircles = document.querySelector('.threeCircles')
 const settingsContainer = document.querySelector('.settingsContainer')
 var msgsContainer = document.querySelector('.msgsContainer')
@@ -17,7 +17,6 @@ const msgsCount_1=()=>{
     massegesCounter+=1
     document.querySelector('.p2').innerHTML=`${massegesCounter} masseges`
 }
-msgsCount_1()
 
 
 
@@ -33,7 +32,7 @@ const myMsg = (text)=>{
     return `
                 <div class="myMsg">
                     <div class="msgTop">you</div>
-                    <div class="msgBody">${text}</div>
+                    <div class="msgBody">${text.replace(/<|>/g, "")}</div>
                 </div>
             `
 }
@@ -69,7 +68,7 @@ const animations=()=>{
     const pageSlider = document.querySelector('.page2')
     pageSlider.classList.add('animatePage2Slider')
 }
-page1Btn.addEventListener('click',()=>{
+letsStartBtn.addEventListener('click',()=>{
     animations()
 })
 threeCircles.addEventListener('click',()=>{
