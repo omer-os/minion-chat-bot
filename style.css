@@ -114,6 +114,7 @@ html,body{
     justify-content: space-between;
     align-items: center;
     padding: 5px 10px;
+    z-index: 1000;
 }.nfRight{
     margin-left: 6px;
     font-family: sans-serif;
@@ -169,7 +170,7 @@ html,body{
 
 .Minionmsg, .myMsg{
     position: relative;
-    background-color: #FFFB9E;
+    background-color: #fffc9ecb;
     margin: 10px 25px;
     padding: 10px;
     border-radius: 10px;
@@ -218,41 +219,55 @@ html,body{
 }
 
 
-
-
-
-
 .settingsContainer{
-    position: absolute;
-    right: 0;
-    top: 54px;
-    width: 0px;
-    z-index: 1000;
-    background: #4f4744ab;
+    background-color: #4f4744bb;
+    padding: 20px 10px;
+    color: white;
+    font-family: sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
-    bottom: 0;
-    font-family: sans-serif;
-    padding: 30px 0;
     overflow: hidden;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: -120%;
+    height: 100%;
+    z-index: 999;
     transition: all .4s ease;
-}.setTitle{
-    color: white;
-    font-size: 2rem;
+}
+
+
+
+
+.set{
+    margin: 10px 0;
+}
+.setTitle{
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 600;
 }.devs{
-    margin-top: 20px;
-    font-size: 1.2rem;
-    color: white;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 5px;
+    font-size: 1.1rem;
     text-transform: capitalize;
+}.showsettingsContainer{
+    top: 54px; 
 }
-
-.showsettingsContainer{
-    width: 300px;
+.devs1,.devs2{
+    background-color:#FFD600;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 700;
+    text-align: center;
+    margin: 5px 0;
+    cursor: pointer;
+}.devs1:active,.devs2:active{
+    transform: scale(.94);
 }
-
-
-
 
 @media (min-width: 750px){
     .page2>*{

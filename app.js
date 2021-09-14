@@ -3,12 +3,29 @@ const letsStartBtn = document.querySelector('.letsStartBtn')
 const threeCircles = document.querySelector('.threeCircles')
 const settingsContainer = document.querySelector('.settingsContainer')
 var msgsContainer = document.querySelector('.msgsContainer')
+const devs1 = document.querySelector('.devs1')
+const img = ["./imgs/backgroundImg.png", "./imgs/backgroundimage2.png", "./imgs/backgroundimage3.png", "./imgs/backgroundimage5.png"]
 
 
 
 
 
 
+
+var imgCounter=0;
+const changeBackground = ()=>{
+    imgCounter++
+    const page2 = document.querySelector('.page2')
+    page2.style=`background-image: url(${img[imgCounter]});`
+    console.log(imgCounter);
+    if (imgCounter==3) {
+        imgCounter=0
+    }
+}
+
+const clearMsgs = ()=>{
+    msgsContainer.innerHTML=''
+}
 
 
 // this counter for counting masseges and diplay it to left side of navigation bar
