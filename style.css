@@ -24,7 +24,7 @@ html,body{
 
 
 
-/* page -1- style starts here */
+/* page1 */
 .page1{
     position: absolute;
     left: 0;
@@ -71,10 +71,6 @@ html,body{
 }.letsStartBtn:active{
     transform: scale(.94);
 }
-/* page -1- style ends here */
-
-
-
 
 
 
@@ -139,6 +135,7 @@ html,body{
     flex-direction: column;
     align-items: center;
     gap: 4px;
+    cursor: pointer;
 }
 .c{
     width: 10px;
@@ -259,10 +256,46 @@ html,body{
 
 @media (min-width: 750px){
     .page2>*{
-        width: 700px;
+        width: 600px;
         margin: auto;
     }
+
     .msgsContainer::-webkit-scrollbar{
         width: 0;
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* settings button animation */
+.c{
+    transform: rotate(0deg);
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    transition: all .4s ease;
+}
+
+.c1Animate{
+    transform: rotate(135deg);
+    height: 40px;
+    border-radius: 10px;
+    margin-bottom: -29px;
+}
+.c2Animate{
+    opacity: 0;
+}
+.c3Animate{
+    transform: rotate(45deg);
+    height: 40px;
+    border-radius: 10px;
+    margin-top: -29px;
 }

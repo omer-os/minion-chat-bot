@@ -73,6 +73,9 @@ letsStartBtn.addEventListener('click',()=>{
 })
 threeCircles.addEventListener('click',()=>{
     settingsContainer.classList.toggle('showsettingsContainer')
+    document.querySelector('.c1').classList.toggle('c1Animate')
+    document.querySelector('.c2').classList.toggle('c2Animate')
+    document.querySelector('.c3').classList.toggle('c3Animate')
 })
 
 
@@ -80,7 +83,10 @@ threeCircles.addEventListener('click',()=>{
 
 
 
-
+const scrolIntoLastChild=()=>{
+    const lC = msgsContainer.lastElementChild
+    lC.scrollIntoView()
+}
 
 
 // whenever ENTER button cliked your massege will show in masseges container
@@ -89,8 +95,7 @@ newMsgInput.addEventListener('keyup',(key)=>{
     if(key.key=="Enter"){
         msgsContainer.innerHTML+=myMsg(newMsgInput.value)
         newMsgInput.value=''
-
-        const lC = msgsContainer.lastElementChild
-        lC.scrollIntoView()
+        scrolIntoLastChild()
+        
     }
 })
